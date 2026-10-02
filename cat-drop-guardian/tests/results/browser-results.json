@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "name": "Title, original atlas and art load",
+      "result": "PASS"
+    },
+    {
+      "name": "Start by touch",
+      "result": "PASS"
+    },
+    {
+      "name": "Touch move and first calico deployment",
+      "result": "PASS"
+    },
+    {
+      "name": "Pause freezes battle and puzzle",
+      "result": "PASS"
+    },
+    {
+      "name": "Resume advances exactly once",
+      "result": "PASS"
+    },
+    {
+      "name": "Keyboard rotation, move, hard drop",
+      "result": "PASS"
+    },
+    {
+      "name": "Blur automatically pauses",
+      "result": "PASS"
+    },
+    {
+      "name": "Skill consumes SP once and disables button",
+      "result": "PASS"
+    },
+    {
+      "name": "Cancel restart preserves progress",
+      "result": "PASS"
+    },
+    {
+      "name": "Reload and continue preserve progress",
+      "result": "PASS"
+    },
+    {
+      "name": "Down swipe drops a pair",
+      "result": "PASS"
+    },
+    {
+      "name": "Responsive 320×568",
+      "result": "PASS"
+    },
+    {
+      "name": "Responsive 360×640",
+      "result": "PASS"
+    },
+    {
+      "name": "Responsive 390×844",
+      "result": "PASS"
+    },
+    {
+      "name": "Responsive 768×1024",
+      "result": "PASS"
+    },
+    {
+      "name": "Responsive 844×390",
+      "result": "PASS"
+    },
+    {
+      "name": "Loss dialog and terminal state",
+      "result": "PASS"
+    },
+    {
+      "name": "Retry fully resets state",
+      "result": "PASS"
+    },
+    {
+      "name": "Victory dialog",
+      "result": "PASS"
+    },
+    {
+      "name": "Practice difficulty is selected",
+      "result": "PASS"
+    },
+    {
+      "name": "Saved single HTML opens and plays via file://",
+      "result": "PASS"
+    },
+    {
+      "name": "Installed service worker allows offline reload and play",
+      "result": "PASS"
+    },
+    {
+      "name": "PWA scope does not affect neighboring games",
+      "result": "PASS"
+    },
+    {
+      "name": "Corrupt save falls back to a new game",
+      "result": "PASS"
+    },
+    {
+      "name": "No JavaScript exceptions or HTTP resource failures",
+      "result": "PASS"
+    },
+    {
+      "name": "Game remains playable when localStorage is blocked",
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

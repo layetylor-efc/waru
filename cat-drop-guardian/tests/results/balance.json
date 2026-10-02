@@ -1,0 +1,226 @@
+{
+  "wins": 20,
+  "total": 20,
+  "results": [
+    {
+      "mode": "normal",
+      "seed": 1,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 39950,
+      "hp": 200,
+      "matches": 243,
+      "drops": 162
+    },
+    {
+      "mode": "normal",
+      "seed": 2,
+      "result": "won",
+      "time": 204,
+      "wave": 5,
+      "score": 42250,
+      "hp": 200,
+      "matches": 252,
+      "drops": 162
+    },
+    {
+      "mode": "normal",
+      "seed": 3,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 43250,
+      "hp": 200,
+      "matches": 253,
+      "drops": 161
+    },
+    {
+      "mode": "normal",
+      "seed": 4,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 44650,
+      "hp": 200,
+      "matches": 261,
+      "drops": 162
+    },
+    {
+      "mode": "normal",
+      "seed": 5,
+      "result": "won",
+      "time": 204,
+      "wave": 5,
+      "score": 42550,
+      "hp": 200,
+      "matches": 252,
+      "drops": 162
+    },
+    {
+      "mode": "normal",
+      "seed": 6,
+      "result": "won",
+      "time": 204,
+      "wave": 5,
+      "score": 42150,
+      "hp": 200,
+      "matches": 252,
+      "drops": 162
+    },
+    {
+      "mode": "normal",
+      "seed": 7,
+      "result": "won",
+      "time": 202,
+      "wave": 5,
+      "score": 39250,
+      "hp": 200,
+      "matches": 236,
+      "drops": 161
+    },
+    {
+      "mode": "normal",
+      "seed": 8,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 41650,
+      "hp": 200,
+      "matches": 249,
+      "drops": 162
+    },
+    {
+      "mode": "normal",
+      "seed": 9,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 40250,
+      "hp": 200,
+      "matches": 242,
+      "drops": 161
+    },
+    {
+      "mode": "normal",
+      "seed": 10,
+      "result": "won",
+      "time": 201,
+      "wave": 5,
+      "score": 39050,
+      "hp": 200,
+      "matches": 231,
+      "drops": 160
+    },
+    {
+      "mode": "relaxed",
+      "seed": 1,
+      "result": "won",
+      "time": 201,
+      "wave": 5,
+      "score": 40350,
+      "hp": 200,
+      "matches": 248,
+      "drops": 160
+    },
+    {
+      "mode": "relaxed",
+      "seed": 2,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 40450,
+      "hp": 200,
+      "matches": 246,
+      "drops": 162
+    },
+    {
+      "mode": "relaxed",
+      "seed": 3,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 43250,
+      "hp": 200,
+      "matches": 253,
+      "drops": 161
+    },
+    {
+      "mode": "relaxed",
+      "seed": 4,
+      "result": "won",
+      "time": 202,
+      "wave": 5,
+      "score": 44650,
+      "hp": 200,
+      "matches": 261,
+      "drops": 161
+    },
+    {
+      "mode": "relaxed",
+      "seed": 5,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 42550,
+      "hp": 200,
+      "matches": 252,
+      "drops": 161
+    },
+    {
+      "mode": "relaxed",
+      "seed": 6,
+      "result": "won",
+      "time": 203,
+      "wave": 5,
+      "score": 43050,
+      "hp": 200,
+      "matches": 259,
+      "drops": 161
+    },
+    {
+      "mode": "relaxed",
+      "seed": 7,
+      "result": "won",
+      "time": 200,
+      "wave": 5,
+      "score": 37350,
+      "hp": 200,
+      "matches": 226,
+      "drops": 159
+    },
+    {
+      "mode": "relaxed",
+      "seed": 8,
+      "result": "won",
+      "time": 200,
+      "wave": 5,
+      "score": 39650,
+      "hp": 200,
+      "matches": 235,
+      "drops": 159
+    },
+    {
+      "mode": "relaxed",
+      "seed": 9,
+      "result": "won",
+      "time": 202,
+      "wave": 5,
+      "score": 40250,
+      "hp": 200,
+      "matches": 242,
+      "drops": 161
+    },
+    {
+      "mode": "relaxed",
+      "seed": 10,
+      "result": "won",
+      "time": 201,
+      "wave": 5,
+      "score": 39050,
+      "hp": 200,
+      "matches": 231,
+      "drops": 160
+    }
+  ]
+}

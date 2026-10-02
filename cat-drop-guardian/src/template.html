@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101b30">
+<meta name="description" content="そろえて、出撃。猫の街を守りぬけ。落ちものパズル×猫防衛のスマホ向けゲーム。">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>CAT DROP GUARDIAN — そろえて、出撃。</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<main id="app">
+  <section id="home" aria-label="タイトル画面">
+    <div class="home-top"><a href="https://layetylor-efc.github.io/waru/" class="wordmark" aria-label="ゲーム一覧へ">GUARDIAN<span>COMMAND</span></a><span class="edition">PUZZLE × DEFENSE</span><button class="round" id="home-help" aria-label="遊び方">?</button></div>
+    <div class="key-art"><canvas id="home-art" width="864" height="1100" aria-label="メガネとヘッドホンの少女司令官と4種類の猫たち"></canvas><div class="art-shade"></div><span class="chapter"><i></i> OPERATION 01 · 猫の街防衛戦</span><div class="art-caption"><span class="overline">そろえて、出撃。</span><h1>CAT DROP<br><em>GUARDIAN</em><span class="title-dot">✦</span></h1><p>この街の未来は、君のひと手に。</p></div></div>
+    <div class="home-controls">
+      <div class="team-strip" aria-label="4種類の猫の役割"><span><canvas data-face="0" width="80" height="80"></canvas>三毛<span>攻撃</span></span><span><canvas data-face="1" width="80" height="80"></canvas>白猫<span>回復</span></span><span><canvas data-face="2" width="80" height="80"></canvas>黒猫<span>守り</span></span><span><canvas data-face="3" width="80" height="80"></canvas>茶トラ<span>範囲</span></span></div>
+      <div class="mode-picker" aria-label="難易度"><button id="mode-normal" class="selected" aria-pressed="true">スタンダード</button><button id="mode-relaxed" aria-pressed="false">ゆっくり練習</button></div>
+      <button id="start" class="primary"><span>防衛をはじめる</span><b>→</b></button>
+      <button id="continue" class="secondary" hidden>つづきから再開</button>
+      <div class="home-bottom"><button id="install">ホーム画面に追加</button><span>BEST <b id="best">0</b></span><button id="share-home">シェア ↗</button></div>
+      <div class="creator">AI曲芸師 松永良平 · v1.0.0</div>
+    </div>
+  </section>
+
+  <section id="game" hidden aria-label="ゲーム画面">
+    <header class="game-header"><button id="game-menu" class="mini-brand" aria-label="一時停止とメニュー">CAT DROP<span>GUARDIAN</span></button><div class="score"><small>SCORE</small><b id="score">0</b></div><button id="sound" class="round" aria-label="効果音をオンにする" aria-pressed="false">♪<span id="sound-state">OFF</span></button><button id="pause" class="round" aria-label="一時停止">Ⅱ</button></header>
+    <div class="battle-status"><div class="wave"><span>WAVE</span><b id="wave">01</b><small>/ 05</small></div><div class="castle-meter"><div class="meter-label"><span>猫の城</span><b id="hp-text">200 / 200</b></div><div class="meter"><i id="hp-bar"></i></div></div><div class="shield-value"><small>SHIELD</small><b id="shield-text">0</b></div></div>
+    <div class="battle-wrap"><canvas id="battle" aria-label="猫の部隊が敵から城を守る戦闘フィールド"></canvas><span class="battle-label"><i></i> LIVE DEFENSE</span><span id="enemy-count" class="enemy-count">敵 0 / 5</span><div id="battle-toast" class="battle-toast"></div></div>
+    <div class="puzzle-layout">
+      <div class="board-panel"><div class="board-heading"><span>DROP ZONE</span><span id="chain" aria-live="polite">3匹そろえて出撃</span></div><canvas id="board" tabindex="0" aria-label="6列8段の猫パズル。左右で移動、上で回転、スペースで落下"></canvas></div>
+      <aside class="command-panel" aria-label="司令官と次の猫"><div class="commander"><canvas id="portrait" width="180" height="200" aria-label="ヘッドホンの少女司令官"></canvas><span>COMMANDER</span></div><p id="commander-line" aria-live="polite">猫たちと、<br>この街を守ろう。</p><div class="next-box"><span>NEXT</span><canvas id="next" width="160" height="95" aria-label="次に落ちる猫のペア"></canvas></div><div class="chain-record"><span>MAX CHAIN</span><b id="max-chain">0<span>連鎖</span></b></div><div class="deployment"><span>出撃中</span><div id="unit-indicators"></div></div><button id="help-game" class="help-mini">遊び方 ?</button></aside>
+    </div>
+    <div class="controls" aria-label="パズル操作"><button data-control="left" aria-label="左へ移動"><b>←</b><span>左へ</span></button><button data-control="rotate" aria-label="ペアを回転"><b>↻</b><span>回転</span></button><button data-control="drop" class="drop" aria-label="猫をすぐに落とす"><b>↓</b><span>落とす</span></button><button data-control="right" aria-label="右へ移動"><b>→</b><span>右へ</span></button></div>
+    <div class="skill-row"><div class="sp-label"><span>COMMAND SP</span><div class="meter sp"><i id="sp-bar"></i></div><b id="sp-text">0 / 100</b></div><button id="skill" disabled><span>✦</span><div>全員、出撃！<small id="skill-caption">SP 100で発動</small></div></button></div>
+    <p class="touch-note">列をタップで移動 · 上スワイプで回転 · 下で落下</p>
+  </section>
+</main>
+<dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+<div id="notice" role="status" aria-live="polite"></div>
+<img id="atlas" src="__ATLAS__" alt="" hidden>
+<img id="key-visual" src="__COVER__" alt="ゲームのコンセプトアート" hidden>
+<noscript>このゲームを遊ぶには、ブラウザのJavaScriptを有効にしてください。</noscript>
+<script>/*__CORE__*/</script>
+<script>/*__APP__*/</script>
+</body>
+</html>

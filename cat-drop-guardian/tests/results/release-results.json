@@ -1,0 +1,55 @@
+{
+  "evidence": [
+    {
+      "width": 320,
+      "height": 568,
+      "sprites": 6,
+      "aspect": "PASS",
+      "bounds": "PASS",
+      "groundY": "PASS"
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "sprites": 6,
+      "aspect": "PASS",
+      "bounds": "PASS",
+      "groundY": "PASS"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "sprites": 6,
+      "aspect": "PASS",
+      "bounds": "PASS",
+      "groundY": "PASS"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "sprites": 12,
+      "aspect": "PASS",
+      "bounds": "PASS",
+      "groundY": "PASS"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "sprites": 6,
+      "aspect": "PASS",
+      "bounds": "PASS",
+      "groundY": "PASS"
+    }
+  ],
+  "nav": {
+    "width": 320,
+    "sections": [
+      "tenku-game",
+      "neko-gravity",
+      "cat-drop-guardian"
+    ],
+    "newLink": "./cat-drop-guardian/",
+    "download": "./cat-drop-guardian/CAT_DROP_GUARDIAN_v1.0.html"
+  },
+  "errors": []
+}

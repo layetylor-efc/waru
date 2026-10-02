@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#071b45">
 <meta name="description" content="天空の遺跡を駆ける、スマホ対応の横スクロールアクション。ページの下でそのまま遊べます。">
-<title>Project Valkyrie — SKY DASH QUEST / NEKO GRAVITY</title>
+<title>Project Valkyrie — SKY DASH QUEST / NEKO GRAVITY / CAT DROP GUARDIAN</title>
 <style>
 :root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#fff;background:#031024}
 *{box-sizing:border-box}
@@ -40,6 +40,7 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
 @media(max-width:480px){main{padding:0 16px}.intro{padding:46px 0 34px}.intro p{font-size:14px}.section-head{gap:12px;align-items:flex-start}.open-game{font-size:12px;padding:8px 10px}.play-note{font-size:12px}.play-section{padding-top:26px}.game-frame{border-radius:10px}}
 @media(orientation:landscape) and (max-height:600px) and (min-width:600px){.game-frame{width:min(100%,calc((100svh - 32px)*16/9));aspect-ratio:16/9}}
 .neko-frame{height:780px;aspect-ratio:auto}.neko-link{background:linear-gradient(110deg,#8de8fa,#dab4f1);border-color:#d2d0f6;color:#10283a}.neko-note{max-width:500px;margin:0 auto 18px;text-align:center;font-size:14px}.neko-section .eyebrow{color:#88e4f4}.neko-section .open-game{border-color:#9acfda80}
+.catdrop-frame{height:820px;aspect-ratio:auto;background:#101b30;border-color:#a1e9d5}.catdrop-section .eyebrow{color:#a1e9d5}.catdrop-section .open-game{border-color:#a1e9d560;background:#173445}
 </style>
 </head>
 <body>
@@ -51,6 +52,7 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
     <a class="b" href="./sky-dash-quest/">天空ステージを起動</a>
     <a class="sub" href="#tenku-game">このページの下で遊ぶ ↓</a>
     <a class="sub" href="#neko-gravity">新作 NEKO GRAVITY で遊ぶ ↓</a>
+    <a class="sub" href="#cat-drop-guardian">新作 CAT DROP GUARDIAN で遊ぶ ↓</a>
   </header>
 
   <section class="play-section" id="tenku-game" aria-labelledby="stage-title">
@@ -90,7 +92,26 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
       </dl>
     </details>
   </section>
-  <footer>SKY DASH QUEST · ブラウザですぐにプレイ</footer>
+  <section class="play-section catdrop-section" id="cat-drop-guardian" aria-labelledby="catdrop-title">
+    <div class="section-head">
+      <div><p class="eyebrow">NEW · PUZZLE × DEFENSE</p><h2 id="catdrop-title">CAT DROP GUARDIAN</h2></div>
+      <a class="open-game" href="./cat-drop-guardian/">アプリを開く ↗</a>
+    </div>
+    <p class="neko-note">そろえて、出撃。猫の街を守りぬけ。<br>3匹そろった猫が部隊になって戦う、落ちもの防衛パズル。</p>
+    <div class="game-frame catdrop-frame">
+      <iframe src="./cat-drop-guardian/" title="CAT DROP GUARDIAN — 落ちものパズルと猫防衛" loading="lazy" allow="fullscreen; web-share" allowfullscreen></iframe>
+    </div>
+    <details class="instructions">
+      <summary>遊び方・HTML共有</summary>
+      <dl>
+        <dt>操作</dt><dd>左右で移動、回転で並び替え、「落とす」で着地。同じ猫を縦・横に3匹そろえると自動出撃します。</dd>
+        <dt>猫の役割</dt><dd>三毛猫＝攻撃、白猫＝回復、黒猫＝シールド、茶トラ＝範囲攻撃。ヘッドホンの少女司令官と5ウェーブを守ろう。</dd>
+        <dt>スキル</dt><dd>SP 100で「全員、出撃！」。敵全体へダメージ、城を回復し、盤面の下2段からも猫を出撃させます。</dd>
+        <dt>共有</dt><dd><a href="./cat-drop-guardian/">ゲームのURL</a>を送るか、<a href="./cat-drop-guardian/CAT_DROP_GUARDIAN_v1.0.html" download="CAT_DROP_GUARDIAN_v1.0.html">1ファイルのHTMLを保存</a>してください。</dd>
+      </dl>
+    </details>
+  </section>
+  <footer>SKY DASH QUEST · NEKO GRAVITY · CAT DROP GUARDIAN<br>ブラウザですぐにプレイ</footer>
 </main>
 </body>
 </html>
