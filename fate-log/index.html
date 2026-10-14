@@ -44,6 +44,9 @@ table{width:100%;border-collapse:collapse;min-width:560px;text-align:left;font-s
 footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:12px;padding:25px 0 48px}
 @media(max-width:720px){.hero{grid-template-columns:1fr;gap:26px;padding:34px 0 46px}.hero-copy{text-align:center}.hero .lead{margin-left:auto;margin-right:auto}.hero .buttons{justify-content:center}.screen{max-width:300px}.features{grid-template-columns:1fr}.characters{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.mini-spec{grid-template-columns:1fr}.character h3{font-size:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.screen{transform:none}}
+
+/* FATE LOG CHARACTER ARCHIVE 01 — responsive card gallery */
+.card-section{scroll-margin-top:65px}.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.card-count{white-space:nowrap;font:700 14px Georgia,serif;color:#f5dfab;border:1px solid #ab8b57;padding:8px 13px;border-radius:99px}.card-jump{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 18px}.card-jump a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border-radius:9px;background:#142f48;border:1px solid #6484a3;color:#dcf4ff;text-decoration:none;font-size:13px;font-weight:700}.card-jump a:hover{border-color:#f7d595;background:#20405b}.card-help{color:#9bdbe9;font-size:13px}.card-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;margin:22px 0 20px}.card-tile{display:block;min-width:0;text-decoration:none;border:1px solid #658aa367;border-radius:14px;background:linear-gradient(160deg,#162b40,#0a1728);overflow:hidden;box-shadow:0 10px 26px #0006;transition:transform .2s,border-color .2s,box-shadow .2s}.card-tile:hover,.card-tile:focus-visible{transform:translateY(-5px);border-color:#d9bf83;box-shadow:0 16px 30px #0009,0 0 22px #4facd638}.card-frame{display:block;aspect-ratio:3/4;background:#061020;overflow:hidden}.card-frame img{width:100%;height:100%;object-fit:cover;display:block}.card-label{padding:10px 10px 13px;display:grid;gap:3px}.card-label strong{font-size:13px;color:#f6e4be;line-height:1.35}.card-label small{color:#accbdf;line-height:1.4;font-size:11px}.card-lightbox{position:fixed;inset:0;width:min(94vw,850px);max-width:94vw;max-height:94vh;margin:auto;padding:12px;overflow:auto;border:1px solid #caa764;border-radius:12px;background:#091523;color:white;box-shadow:0 15px 80px #000e}.card-lightbox::backdrop{background:#010812ee;backdrop-filter:blur(5px)}.card-lightbox img{display:block;width:auto;max-width:100%;max-height:calc(94vh - 110px);height:auto;object-fit:contain;margin:0 auto}.lightbox-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;font-size:14px;font-weight:700;color:#e8d1a2}.lightbox-toolbar button{background:#19324a;border:1px solid #8ab5d2;border-radius:8px;padding:8px 14px;color:white;cursor:pointer;min-height:44px}.card-lightbox>a{display:block;text-align:center;margin-top:10px;padding:8px;font-size:13px}.card-lightbox button:focus-visible,.card-tile:focus-visible,.card-jump a:focus-visible{outline:3px solid #9ee9ff;outline-offset:2px}@media(max-width:850px){.card-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:560px){.card-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card-label{padding:9px}.card-label strong{font-size:12px}.card-head h2{font-size:24px}.card-count{font-size:12px;padding:6px 10px}}@media(prefers-reduced-motion:reduce){.card-tile{transition:none}.card-tile:hover,.card-tile:focus-visible{transform:none}}
 </style>
 </head>
 <body>
@@ -56,7 +59,7 @@ footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:
 <p class="lead">まず一つ。<br>未来はそこから変わる。</p>
 <p>現実のタスクを、時間改変アドベンチャーの「任務」に。今日の選択と達成が、キャラクターの言葉と物語に記録されていくスマホ向け作品です。</p>
 <span class="pill">Android優先 / 開発中</span>
-<div class="buttons"><a class="btn primary" href="#apk">APK・バージョン情報 ↓</a><a class="btn" href="#characters">キャラクター設定 ↓</a></div>
+<div class="buttons"><a class="btn primary" href="#apk">APK・バージョン情報 ↓</a><a class="btn" href="#characters">キャラクター設定 ↓</a><a class="btn" href="#character-cards">カード図鑑10枚 ↓</a></div>
 <p class="note">紹介ページ作成：<time datetime="2026-10-14">2026年10月14日</time> ／ APKの動作保証ではありません。</p>
 </div>
 <div class="screen" aria-label="FATE LOGの雰囲気を再現したデザイン見本。実機画面の画像ではありません。">
@@ -83,6 +86,57 @@ footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:
 <article class="character"><div class="code">KUJO KAITO · FORECAST</div><h3>九条カイト</h3><p class="tag">予測と最適化</p><p>合理的で冷静。データから可能性を示すが、最終的な選択は人間の自由にあると知っていく。</p><p class="quote">「最適解は一つとは限らない。」</p></article>
 </div><p class="note">年齢・衣装の一部やストーリー展開は設定検討中です。作品紹介に掲載したキャラクター像は設計資料の要約です。</p>
 </section>
+
+<section class="content card-section" id="character-cards" aria-labelledby="card-section-title">
+<span class="eyebrow">CHARACTER ARCHIVE 01 · 10 PREMIUM CARDS</span>
+<div class="card-head"><div><h2 id="card-section-title">キャラクターカード図鑑</h2><p>時を越え、運命を紡ぐ者たち。<br>メインキャラクター8人と、特別デュオカード2組。</p></div><span class="card-count">10 / 10</span></div>
+<nav class="card-jump" aria-label="カードへ移動"><a href="#cards-grid">10枚を見る ↓</a><a href="#card-special">スペシャルカード ↓</a><a href="#characters">既存の設定も見る ↗</a></nav>
+<p class="card-help">カードをタップすると拡大表示。各画像はそのまま保存できます。</p>
+<div class="card-gallery" id="cards-grid">
+<a class="card-tile" href="./assets/cards/01-rei.webp" data-card-name="レイ" aria-label="レイのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/01-rei.webp" alt="FATE LOGキャラクターカード レイ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>01 · レイ</strong><small>主人公</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/02-kagerei.webp" data-card-name="カゲレイ" aria-label="カゲレイのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/02-kagerei.webp" alt="FATE LOGキャラクターカード カゲレイ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>02 · カゲレイ</strong><small>もう一つの可能性</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/03-mirai.webp" data-card-name="ミライ" aria-label="ミライのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/03-mirai.webp" alt="FATE LOGキャラクターカード ミライ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>03 · ミライ</strong><small>ナビゲーター</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/04-mobius.webp" data-card-name="メビウス" aria-label="メビウスのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/04-mobius.webp" alt="FATE LOGキャラクターカード メビウス" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>04 · メビウス</strong><small>運命の観測者</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/05-chrono.webp" data-card-name="クロノ" aria-label="クロノのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/05-chrono.webp" alt="FATE LOGキャラクターカード クロノ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>05 · クロノ</strong><small>アーカイブ官</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/06-kanade.webp" data-card-name="カナデ" aria-label="カナデのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/06-kanade.webp" alt="FATE LOGキャラクターカード カナデ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>06 · カナデ</strong><small>ムードメーカー</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/07-sora.webp" data-card-name="ソラ" aria-label="ソラのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/07-sora.webp" alt="FATE LOGキャラクターカード ソラ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>07 · ソラ</strong><small>サポート担当</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/08-noah.webp" data-card-name="ノア" aria-label="ノアのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/08-noah.webp" alt="FATE LOGキャラクターカード ノア" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>08 · ノア</strong><small>癒しの少女</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/09-rei-mirai.webp" data-card-name="レイ × ミライ" aria-label="レイ × ミライのカードを拡大する" id="card-special">
+  <span class="card-frame"><img src="./assets/cards/09-rei-mirai.webp" alt="FATE LOGキャラクターカード レイ × ミライ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>09 · レイ × ミライ</strong><small>SPECIAL · 主人公チーム</small></span>
+</a>
+<a class="card-tile" href="./assets/cards/10-mobius-kagerei.webp" data-card-name="メビウス × カゲレイ" aria-label="メビウス × カゲレイのカードを拡大する">
+  <span class="card-frame"><img src="./assets/cards/10-mobius-kagerei.webp" alt="FATE LOGキャラクターカード メビウス × カゲレイ" loading="lazy" decoding="async" width="756" height="1008"></span>
+  <span class="card-label"><strong>10 · メビウス × カゲレイ</strong><small>SPECIAL · 対極の共鳴</small></span>
+</a>
+</div>
+<p class="note">※キャラクターカードは2026年10月14日制作のコンセプトアートです。各カードの能力値・セリフは演出案であり、アプリの実装済みパラメータを示すものではありません。既存の4人の初期設定は下記に保存しています。</p>
+</section>
+<dialog id="card-lightbox" class="card-lightbox" aria-label="キャラクターカード拡大表示"><div class="lightbox-toolbar"><span id="card-lightbox-title"></span><button type="button" id="card-lightbox-close" aria-label="拡大表示を閉じる">× 閉じる</button></div><img id="card-lightbox-image" src="" alt=""><a id="card-lightbox-link" href="#" target="_blank" rel="noopener">画像を開いて保存 ↗</a></dialog>
 <section class="content" id="apk"><span class="eyebrow">ANDROID APK / RELEASE ARCHIVE</span><h2>APK・バージョン情報</h2>
 <p>手元の既存APKの情報を確認した履歴です。APK自体は保存されており、v2.09・v2.08・v2.07について内部のZIP構造を検査済みです。</p>
 <div class="warn"><strong>現在、サイトからの直接ダウンロードは準備中です。</strong><p>APKの公開配布先URLは未設定です。未確認のURLをダウンロードボタンとして掲載していません。また、ZIP構造が正常でもAndroid端末へのインストールや起動が成功する保証はありません。</p></div>
@@ -108,4 +162,23 @@ footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:
 <div class="bottom-link"><a class="btn primary" href="../">← 他のゲームも見る</a></div>
 </main>
 <footer>FATE LOG 〜運命改変録〜<br>作品紹介ページ初版：<time datetime="2026-10-14">2026年10月14日</time><br>画像・操作見本は概念デザインであり、現行アプリを直接実行するものではありません。</footer>
+
+<script>
+(()=>{
+const dlg=document.getElementById('card-lightbox');
+if(!dlg || typeof dlg.showModal!=='function')return;
+const im=document.getElementById('card-lightbox-image');
+const name=document.getElementById('card-lightbox-title');
+const link=document.getElementById('card-lightbox-link');
+const close=document.getElementById('card-lightbox-close');
+let lastFocus=null;
+document.querySelectorAll('.card-tile').forEach(a=>a.addEventListener('click',e=>{
+e.preventDefault();lastFocus=a;const label=a.dataset.cardName||'カード';
+im.src=a.href;im.alt='FATE LOG '+label+' の拡大カード';name.textContent=label;link.href=a.href;dlg.showModal();
+}));
+close.addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
+dlg.addEventListener('close',()=>{im.removeAttribute('src');if(lastFocus)lastFocus.focus();});
+})();
+</script>
 </body></html>
