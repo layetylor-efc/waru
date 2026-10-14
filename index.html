@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#071b45">
-<meta name="description" content="天空の遺跡を駆ける、スマホ対応の横スクロールアクション。ページの下でそのまま遊べます。">
-<title>Project Valkyrie — SKY DASH QUEST / NEKO GRAVITY / CAT DROP GUARDIAN</title>
+<meta name="description" content="スマホで遊べるゲーム＆体験作品集。天空の遺跡・NEKO GRAVITY・CAT DROP GUARDIAN・AI曲芸師 Tilt Hologram v9.0。">
+<title>AI曲芸師 ゲーム＆体験作品集｜SKY DASH QUEST・NEKO GRAVITY・CAT DROP GUARDIAN・Tilt Hologram</title>
 <style>
 :root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#fff;background:#031024}
 *{box-sizing:border-box}
@@ -41,6 +41,10 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
 @media(orientation:landscape) and (max-height:600px) and (min-width:600px){.game-frame{width:min(100%,calc((100svh - 32px)*16/9));aspect-ratio:16/9}}
 .neko-frame{height:780px;aspect-ratio:auto}.neko-link{background:linear-gradient(110deg,#8de8fa,#dab4f1);border-color:#d2d0f6;color:#10283a}.neko-note{max-width:500px;margin:0 auto 18px;text-align:center;font-size:14px}.neko-section .eyebrow{color:#88e4f4}.neko-section .open-game{border-color:#9acfda80}
 .catdrop-frame{height:820px;aspect-ratio:auto;background:#101b30;border-color:#a1e9d5}.catdrop-section .eyebrow{color:#a1e9d5}.catdrop-section .open-game{border-color:#a1e9d560;background:#173445}
+.sky-section .eyebrow{color:#e7cb8b}.sky-frame{height:780px;aspect-ratio:auto;background:#10172e}.sky-section .open-game{border-color:#dec48782}
+.holo-section .eyebrow{color:#d5a4ff}.holo-frame{height:780px;aspect-ratio:auto;background:#05091a}.holo-section .open-game{border-color:#bda4fc80}
+.publish-date,.page-date{color:#9ab3d0;font-size:12px;letter-spacing:.02em}.publish-date{text-align:center;margin:0 auto 12px}.page-date{margin:17px auto 0;font-size:12px}.publish-date time,.page-date time{color:#d9e8f9}
+@media(max-width:480px){.sky-frame,.holo-frame,.neko-frame,.catdrop-frame{width:100%}.publish-date{font-size:11px}.page-date{font-size:11px}}
 </style>
 </head>
 <body>
@@ -53,23 +57,26 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
     <a class="sub" href="#tenku-game">このページの下で遊ぶ ↓</a>
     <a class="sub" href="#neko-gravity">新作 NEKO GRAVITY で遊ぶ ↓</a>
     <a class="sub" href="#cat-drop-guardian">新作 CAT DROP GUARDIAN で遊ぶ ↓</a>
+    <a class="sub" href="#tilt-hologram">AI曲芸師 Tilt Hologram v9.0 を見る ↓</a>
+    <p class="page-date">この版の作成日・更新日：<time datetime="2026-10-14">2026年10月14日</time></p>
   </header>
 
-  <section class="play-section" id="tenku-game" aria-labelledby="stage-title">
+  <section class="play-section sky-section" id="tenku-game" aria-labelledby="stage-title">
     <div class="section-head">
-      <div><p class="eyebrow">STAGE 2–3 · PLAY</p><h2 id="stage-title">天空の遺跡</h2></div>
-      <a class="open-game" href="./game.html">大きな画面で遊ぶ ↗</a>
+      <div><p class="eyebrow">ACTION · SKY RUINS</p><h2 id="stage-title">天空の遺跡</h2></div>
+      <a class="open-game" href="./game.html">アプリを開く ↗</a>
     </div>
-    <p class="play-note">剣とスキルで道を切り開き、3つの星を集めよう。</p>
-    <div class="game-frame">
-      <iframe src="./game.html" title="SKY DASH QUEST 天空の遺跡 — ゲーム画面" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+    <p class="play-note">空に浮かぶ遺跡を駆け抜けろ。<br>剣とスキル、ジャンプを使い、3つの星を集めよう。</p>
+    <p class="publish-date">紹介ページ作成日・掲載日：<time datetime="2026-10-14">2026年10月14日</time></p>
+    <div class="game-frame sky-frame">
+      <iframe src="./sky-dash-quest/preview.html" title="SKY DASH QUEST — 天空の遺跡 紹介とゲーム起動" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
     </div>
     <details class="instructions">
-      <summary>操作方法</summary>
+      <summary>操作方法・遊び方</summary>
       <dl>
-        <dt>スマホ</dt><dd>左のパッドで移動。右のボタンで攻撃・ジャンプ・ダッシュ・スキル。</dd>
+        <dt>スマホ</dt><dd>紹介画面から「冒険を始める」をタップ。左のパッドで移動、右のボタンで攻撃・ジャンプ・ダッシュ・スキル。</dd>
         <dt>パソコン</dt><dd>← → / A・D：移動、Space：ジャンプ、J：攻撃、K：ダッシュ、U・I：スキル、Esc：一時停止。</dd>
-        <dt>ヒント</dt><dd>空中でもう一度ジャンプすると2段ジャンプ。攻撃は長押しで連続攻撃。</dd>
+        <dt>ヒント</dt><dd>2段ジャンプや長押し連続攻撃を活用。<a href="./game.html">ゲーム単独でも開けます</a>。</dd>
       </dl>
     </details>
   </section>
@@ -79,6 +86,7 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
       <div><p class="eyebrow">NEW · GRAVITY PUZZLE</p><h2 id="neko-title">NEKO GRAVITY</h2></div>
       <a class="open-game" href="./neko-gravity/">アプリを開く ↗</a>
     </div>
+    <p class="publish-date">一覧掲載日：<time datetime="2026-10-14">2026年10月14日</time></p>
     <p class="neko-note">重力、カワイクひっくり返す。<br>スマホを傾けて、3つの星と猫のおうちへ。</p>
     <div class="game-frame neko-frame">
       <iframe src="./neko-gravity/" title="NEKO GRAVITY — 猫の重力パズル" loading="lazy" allow="accelerometer; gyroscope; fullscreen" allowfullscreen></iframe>
@@ -97,6 +105,7 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
       <div><p class="eyebrow">NEW · PUZZLE × DEFENSE</p><h2 id="catdrop-title">CAT DROP GUARDIAN</h2></div>
       <a class="open-game" href="./cat-drop-guardian/">アプリを開く ↗</a>
     </div>
+    <p class="publish-date">一覧掲載日：<time datetime="2026-10-14">2026年10月14日</time></p>
     <p class="neko-note">そろえて、出撃。猫の街を守りぬけ。<br>3匹そろった猫が部隊になって戦う、落ちもの防衛パズル。</p>
     <div class="game-frame catdrop-frame">
       <iframe src="./cat-drop-guardian/" title="CAT DROP GUARDIAN — 落ちものパズルと猫防衛" loading="lazy" allow="fullscreen; web-share" allowfullscreen></iframe>
@@ -111,7 +120,26 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
       </dl>
     </details>
   </section>
-  <footer>SKY DASH QUEST · NEKO GRAVITY · CAT DROP GUARDIAN<br>ブラウザですぐにプレイ</footer>
+  <section class="play-section holo-section" id="tilt-hologram" aria-labelledby="holo-title">
+    <div class="section-head">
+      <div><p class="eyebrow">INTERACTIVE · TILT HOLOGRAM</p><h2 id="holo-title">AI曲芸師 | Tilt Hologram v9.0</h2></div>
+      <a class="open-game" href="https://layetylor-efc.github.io/ai-kyokugeishi-hologram1/" target="_blank" rel="noopener noreferrer">アプリを開く ↗</a>
+    </div>
+    <p class="neko-note">スマホを傾けると光と虹が動く、ホログラム体験。<br>センサーが使えない場合も、指でなぞって楽しめます。</p>
+    <p class="publish-date">一覧掲載日：<time datetime="2026-10-14">2026年10月14日</time></p>
+    <div class="game-frame holo-frame">
+      <iframe src="https://layetylor-efc.github.io/ai-kyokugeishi-hologram1/" title="AI曲芸師 Tilt Hologram v9.0 体験画面" loading="lazy" allow="accelerometer; gyroscope; magnetometer; fullscreen" allowfullscreen></iframe>
+    </div>
+    <details class="instructions">
+      <summary>使い方・リンク</summary>
+      <dl>
+        <dt>スマホ</dt><dd>「センサーON」を選んで端末を傾けると光が変化します。権限が必要な端末では許可してください。</dd>
+        <dt>指操作</dt><dd>センサーOFFでも、画像の上で指を動かすとホログラム表現を確認できます。</dd>
+        <dt>ヒント</dt><dd>埋め込みで傾きが反応しない場合は、<a href="https://layetylor-efc.github.io/ai-kyokugeishi-hologram1/" target="_blank" rel="noopener noreferrer">アプリを直接開く</a>と操作できます。</dd>
+      </dl>
+    </details>
+  </section>
+  <footer>SKY DASH QUEST · NEKO GRAVITY · CAT DROP GUARDIAN · AI曲芸師 Tilt Hologram v9.0<br>この版の作成日・更新日：<time datetime="2026-10-14">2026年10月14日</time><br>スマホからブラウザですぐに体験</footer>
 </main>
 </body>
 </html>
