@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07142e">
+<meta name="description" content="SKY DASH QUEST ─ 天空の遺跡。浮遊する遺跡を舞台に剣とダッシュで駆け抜ける横スクロールアクション。">
+<title>SKY DASH QUEST｜天空の遺跡・ゲーム紹介</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#f3f5ff;background:#080e25}
+*{box-sizing:border-box}
+body{margin:0;min-width:280px;background:radial-gradient(ellipse at 50% 0,#25385d,#080e25 65%);line-height:1.6}
+a,button{font:inherit}a:focus-visible,button:focus-visible{outline:3px solid #8ceeff;outline-offset:4px}
+#landing{max-width:460px;min-height:780px;margin:0 auto;padding:24px 17px 22px;background:linear-gradient(155deg,#111a36,#080e25 70%);text-align:center}
+.brandline{display:flex;align-items:center;justify-content:space-between;text-align:left;gap:8px;margin:0 1px 17px;color:#acbddf;letter-spacing:.15em;font-size:10px;font-weight:800}
+.brandline .spark{font-size:20px;color:#9fe4ff}
+.version{color:#e3c892;border:1px solid #bdc7e14f;padding:6px 10px;border-radius:20px;font-size:9px}
+.hero{height:322px;overflow:hidden;position:relative;border-radius:22px;border:1px solid #b4d9ff80;background:linear-gradient(180deg,#66b8ee 0%,#b3a4dc 47%,#324777 75%,#111f46 100%)}
+.hero::before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;left:-50px;top:-125px;background:#fff3cd87;filter:blur(17px)}
+.haze{position:absolute;inset:0;background:linear-gradient(0deg,#071129ee,transparent 45%),radial-gradient(circle at 72% 35%,#e9c5ff66,transparent 40%)}
+.island{position:absolute;width:210px;height:68px;background:#334b70;clip-path:polygon(0 15%,100% 0,90% 46%,65% 82%,30% 100%,15% 55%);box-shadow:0 18px 22px #162044;top:185px;left:94px;transform:rotate(-7deg)}
+.ruin{position:absolute;top:87px;left:116px;width:126px;height:118px;border:9px solid #dee0e6;border-bottom:0;border-radius:65px 65px 0 0;transform:skew(-5deg) rotate(-5deg);box-shadow:6px 3px 0 #627999 inset,0 5px 20px #1e386b6b}
+.ruin::after{content:"";position:absolute;top:31px;left:35px;width:37px;height:80px;border:6px solid #d8deeb;border-bottom:0;border-radius:24px 24px 0 0}
+.pillar{position:absolute;width:28px;height:123px;top:105px;background:linear-gradient(90deg,#8c9fc2,#e5ebf6,#9e9fc5);transform:rotate(11deg);left:75px;clip-path:polygon(0 0,100% 2%,95% 100%,18% 100%)}
+.pillar.right{left:254px;top:121px;height:85px;transform:rotate(-20deg)}
+.star{position:absolute;color:#fff9b5;filter:drop-shadow(0 0 8px #ffe48b);font-size:22px}.star.a{left:64px;top:70px}.star.b{left:270px;top:65px}.star.c{left:306px;top:156px}
+.character{position:absolute;z-index:2;left:44%;top:176px;font-size:62px;filter:drop-shadow(0 6px 7px #16254a);transform:translateX(-50%)}
+.hero-tag{position:absolute;top:17px;left:16px;font-size:10px;letter-spacing:.17em;color:#eaf5ff;background:#091a3b94;border:1px solid #cbe5ff55;border-radius:30px;padding:7px 13px}
+.hero-title{position:absolute;bottom:18px;left:19px;right:19px;text-align:left;font-weight:900;font-size:30px;line-height:1.26;text-shadow:0 3px 10px #040918}
+.hero-title small{font-size:12px;display:block;letter-spacing:.15em;color:#c5ebff;margin-bottom:8px}
+.kicker{margin:26px 0 10px;color:#c4b0ed;letter-spacing:.16em;font-size:10px;font-weight:800}
+h1{font-size:36px;line-height:1.06;letter-spacing:.05em;margin:0;color:#f5f5ff}
+h1 span{color:#81e5ff;display:block}
+.lead{font-size:12px;color:#b7c9e3;margin:18px auto 19px}
+.stats{display:flex;justify-content:center;gap:24px;color:#bdcce4;font-size:10px;margin:0 auto 20px}
+.stats b{font-size:17px;color:#f4f6ff}
+.cta{display:flex;align-items:center;justify-content:space-between;min-height:59px;background:linear-gradient(115deg,#86e9ff,#8daeff 53%,#d8aaf7);border:0;border-radius:12px;padding:15px 20px;width:100%;color:#092038;font-weight:900;text-decoration:none;font-size:15px}
+.cta span{font-size:26px;font-weight:400}
+.alt{display:block;margin:14px auto 4px;color:#acbddb;font-size:12px}
+.published{font-size:10px;margin:17px auto 0;color:#94a7c7}
+#gameplay{display:none;max-width:460px;margin:auto;height:100svh;min-height:630px;background:#081128}
+#gameplay iframe{border:0;width:100%;height:100%;display:block}
+#back{position:fixed;z-index:5;right:9px;top:8px;border:1px solid #ffffff5c;border-radius:10px;background:#082349ed;color:white;padding:8px 12px;font-size:11px}
+@media(max-width:350px){#landing{padding-left:12px;padding-right:12px}.hero{height:286px}.hero-title{font-size:26px}.ruin{left:101px}.island{left:78px}.pillar.right{left:235px}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<main id="landing">
+<div class="brandline"><span><span class="spark">✦</span> PROJECT VALKYRIE</span><span class="version">ACTION · STAGE 2–3</span></div>
+<div class="hero" aria-label="青空に浮かぶ天空の遺跡をイメージした装飾">
+ <div class="island"></div><div class="ruin"></div><div class="pillar"></div><div class="pillar right"></div><div class="haze"></div>
+ <span class="star a">✦</span><span class="star b">✦</span><span class="star c">✦</span><span class="character" aria-hidden="true">⚔️</span>
+ <div class="hero-tag">SKY DASH QUEST 01</div><div class="hero-title"><small>空を駆ける、新たな冒険。</small>天空の遺跡へ<br>ダッシュせよ。</div>
+</div>
+<p class="kicker">DASH. JUMP. SLASH. EXPLORE.</p>
+<h1>SKY DASH <span>QUEST</span></h1>
+<p class="lead">剣とスキルで道を切り開き、3つの星を集めよう。</p>
+<div class="stats"><span><b>2–3</b> STAGE</span><span><b>3</b> STARS</span><span><b>2</b> JUMPS</span></div>
+<button class="cta" id="play" type="button">この画面で冒険を始める <span aria-hidden="true">→</span></button>
+<a class="alt" href="../game.html" target="_top">全画面でプレイ ↗</a>
+<p class="published">紹介ページ作成日 <time datetime="2026-10-14">2026年10月14日</time></p>
+</main>
+<div id="gameplay"><button id="back" type="button">← 紹介へ戻る</button><iframe id="gameframe" title="天空の遺跡 ゲーム本体" allow="fullscreen" allowfullscreen></iframe></div>
+<script>
+(() => {
+ const landing=document.getElementById('landing'),gameplay=document.getElementById('gameplay'),frame=document.getElementById('gameframe');
+ document.getElementById('play').addEventListener('click',()=>{landing.style.display='none';gameplay.style.display='block';if(!frame.src)frame.src='../game.html';});
+ document.getElementById('back').addEventListener('click',()=>{gameplay.style.display='none';landing.style.display='block';frame.removeAttribute('src');});
+})();
+</script>
+</body>
+</html>
