@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111e">
+<meta name="description" content="FATE LOG〜運命改変録〜。今日の行動で明日の世界線を変える、時間改変ADV×現実タスクRPG。登場人物・遊び方・Android APKの版情報・開発状況を紹介。">
+<title>🕰 FATE LOG 〜運命改変録〜｜作品紹介・APK情報</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;background:#050d17;color:#eef6ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:radial-gradient(ellipse at 50% 0,#133550 0,transparent 50%),#050d17;line-height:1.8}
+a{color:#a6e7fa;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #92ecff;outline-offset:4px}
+.wrap{width:min(1050px,calc(100% - 32px));margin:auto}
+.top{border-bottom:1px solid #c9a86a42;background:#071321db}.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0}.top a{font-size:13px;text-decoration:none}.top strong{font-size:12px;letter-spacing:.12em;color:#eac58e}
+.eyebrow{display:block;color:#e4c184;font-size:12px;font-weight:800;letter-spacing:.18em}
+h1,h2,h3{line-height:1.35}h1{font-family:Georgia,"Noto Serif JP",serif;font-size:clamp(37px,8vw,70px);letter-spacing:.14em;margin:12px 0 2px;font-weight:500}h2{font-size:clamp(23px,4vw,31px);margin:0 0 19px}h3{font-size:18px;margin:0 0 8px}
+.subtitle{font-size:clamp(18px,3.5vw,25px);letter-spacing:.22em;color:#dcb779;margin:0 0 24px}
+p{color:#c2d4e5;margin:0 0 13px}.lead{font-size:clamp(16px,2.6vw,20px);color:#e0edfa;max-width:49ch}
+small,.muted{color:#91abc3;font-size:13px}.hero{padding:65px 0 65px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(230px,.82fr);align-items:center;gap:44px}.hero .buttons{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 22px;text-decoration:none;border-radius:9px;border:1px solid #dab47280;color:#eef6ff;font-weight:800;background:#15304a;font-size:14px}
+.btn:hover{background:#224866}.btn.primary{color:#211608;background:linear-gradient(110deg,#f7dba0,#daa754,#f9cf81);border-color:#f9d58a}
+.pill{display:inline-block;border:1px solid #87dff066;color:#adeffd;background:#0c3445;padding:4px 11px;border-radius:99px;font-size:12px;font-weight:700}
+.screen{width:min(100%,330px);margin:auto;border-radius:24px;padding:13px;background:#050a12;border:2px solid #cfa868;box-shadow:0 5px 60px #58bce322,0 20px 70px #000d;transform:rotate(1deg)}
+.screen-inner{min-height:490px;border:1px solid #9d7e4e;border-radius:12px;overflow:hidden;padding:24px 14px 16px;background:radial-gradient(circle at 50% 20%,#3079a15c,transparent 35%),repeating-linear-gradient(128deg,transparent 0 50px,#d7ae5420 51px,transparent 53px),linear-gradient(165deg,#122e44,#06111f 65%,#1a1b25)}
+.screen-title{text-align:center;font-family:Georgia,serif;letter-spacing:.35em;font-size:24px;color:#f4e0b7}.screen-sub{text-align:center;color:#ddbb84;font-size:11px;letter-spacing:.3em}
+.time-diamond{width:115px;height:115px;margin:33px auto 20px;border:2px solid #5bddff99;transform:rotate(45deg);box-shadow:0 0 45px #37c9ff90,inset 0 0 35px #1a9bdf4d;display:grid;place-items:center}
+.time-diamond:before{content:"";display:block;width:58px;height:58px;background:#a8f8ff;box-shadow:0 0 24px #97e9ff,0 0 80px #71caff;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.screen-dialog{margin:34px 0 14px;padding:10px 12px;border:1px solid #b9a17275;background:#0a2030e8;text-align:center;color:#f2e5d1;font-size:12px}.screen-progress{border-top:1px solid #a4824d;padding:14px 0;color:#f0ddbb;display:flex;align-items:center;justify-content:space-between}.screen-progress strong{font-size:37px;color:#b4f1ff;font-weight:500}
+.bars{display:flex;gap:3px}.bars i{height:10px;width:25px;background:#345162;border:1px solid #7dbad8}.bars i.on{background:#5dd8f4}
+.demo-task{border:1px solid #c9a66c9c;background:#0a1a29cd;margin:8px 0;padding:10px;font-size:12px;color:#f5f6fc}.demo-task:before{content:"○";margin-right:9px;color:#e8c483}
+.note{font-size:12px;color:#8ca7bd;margin:9px 0 0}
+section.content{padding:42px 0;border-top:1px solid #bba1743d}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.panel{border:1px solid #68829a62;border-radius:16px;background:#0b1b2b;padding:22px}.panel h3{color:#f2d394}.panel p{margin:0;font-size:14px}
+.characters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.character{position:relative;overflow:hidden;border:1px solid #677b966b;border-radius:16px;background:linear-gradient(125deg,#152f44,#08131f);padding:24px 20px}
+.character:before{content:"";position:absolute;right:-22px;top:-22px;width:125px;height:125px;border:1px solid #afdeff55;transform:rotate(45deg);pointer-events:none}
+.character .code{font-size:11px;letter-spacing:.17em;color:#a9cadf}.character h3{color:#e7efff;font-size:22px;margin:8px 0}.character .tag{color:#ead1a5;font-size:12px;font-weight:700}.character .quote{color:#b5e8fa;border-left:2px solid #66d0ef;padding-left:10px;margin-top:15px}.character:nth-child(2){background:linear-gradient(125deg,#22293b,#08131f)}.character:nth-child(3){background:linear-gradient(125deg,#3b302e,#08131f)}.character:nth-child(4){background:linear-gradient(125deg,#27203e,#08131f)}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;counter-reset:steps;list-style:none;margin:20px 0;padding:0}.flow li{border:1px solid #7196a970;border-radius:12px;padding:15px 8px;text-align:center;font-size:13px;color:#d2e8ef;background:#0c2131}.flow li:before{counter-increment:steps;content:counter(steps,decimal-leading-zero);display:block;color:#f1cd90;font-size:12px;font-weight:800}
+.details{border:1px solid #68829a66;background:#0a1b2c;border-radius:12px;margin:12px 0}.details summary{padding:14px 18px;cursor:pointer;font-weight:800;color:#eacb91}.details div{padding:0 18px 18px;font-size:14px;color:#c3d6e5}
+table{width:100%;border-collapse:collapse;min-width:560px;text-align:left;font-size:14px}th,td{padding:13px 12px;border-bottom:1px solid #55708863;vertical-align:top}th{color:#eacb91;background:#132a3b}td{color:#d7e3ee}.table-scroll{overflow-x:auto;border:1px solid #50697e70;border-radius:12px}
+.warn{padding:18px 20px;border-left:4px solid #ddad63;background:#3227199c;border-radius:8px;color:#f5e6d4;margin:22px 0}.warn p{margin:0;color:#e5d3b5;font-size:14px}.status{color:#f0d3a6;font-weight:800}
+.mini-spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mini-spec div{padding:16px 18px;border:1px solid #55708870;border-radius:12px;background:#0b1c2c}.mini-spec strong{display:block;color:#f7d695;margin-bottom:4px}.mini-spec span{font-size:13px;color:#bfcedf}
+.release-foot{font-size:12px;color:#98b4cc;overflow-wrap:anywhere}
+.bottom-link{text-align:center;margin:26px 0 36px}
+footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:12px;padding:25px 0 48px}
+@media(max-width:720px){.hero{grid-template-columns:1fr;gap:26px;padding:34px 0 46px}.hero-copy{text-align:center}.hero .lead{margin-left:auto;margin-right:auto}.hero .buttons{justify-content:center}.screen{max-width:300px}.features{grid-template-columns:1fr}.characters{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,1fr)}.mini-spec{grid-template-columns:1fr}.character h3{font-size:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.screen{transform:none}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="ページ移動"><div class="wrap"><a href="../">← ゲーム作品一覧へ戻る</a><strong>FATE LOG / ARCHIVE</strong></div></nav>
+<main class="wrap">
+<header class="hero">
+<div class="hero-copy">
+<span class="eyebrow">TIME REWRITE × REAL-LIFE TASK RPG</span>
+<h1>FATE LOG</h1><p class="subtitle">〜 運 命 改 変 録 〜</p>
+<p class="lead">まず一つ。<br>未来はそこから変わる。</p>
+<p>現実のタスクを、時間改変アドベンチャーの「任務」に。今日の選択と達成が、キャラクターの言葉と物語に記録されていくスマホ向け作品です。</p>
+<span class="pill">Android優先 / 開発中</span>
+<div class="buttons"><a class="btn primary" href="#apk">APK・バージョン情報 ↓</a><a class="btn" href="#characters">キャラクター設定 ↓</a></div>
+<p class="note">紹介ページ作成：<time datetime="2026-10-14">2026年10月14日</time> ／ APKの動作保証ではありません。</p>
+</div>
+<div class="screen" aria-label="FATE LOGの雰囲気を再現したデザイン見本。実機画面の画像ではありません。">
+<div class="screen-inner"><div class="screen-title">FATE LOG</div><div class="screen-sub">運 命 改 変 録</div><div class="time-diamond" aria-hidden="true"></div>
+<div class="screen-dialog">ナビゲーター<br>「まず一つ。未来はそこから変わる。」</div>
+<div class="screen-progress"><span>本日の進行率<br><strong>50%</strong></span><div class="bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div></div>
+<div class="demo-task">散歩を15分</div><div class="demo-task">机の上を整える</div><div class="demo-task">明日の予定を決める</div>
+</div></div>
+</header>
+<section class="content" id="about"><span class="eyebrow">GAME CONCEPT</span><h2>現実の一歩が、物語になる。</h2>
+<div class="features">
+<div class="panel"><h3>01 · 今日の3つ</h3><p>やることを絞って選ぶ。小さなタスクから始められる設計。</p></div>
+<div class="panel"><h3>02 · 運命記録</h3><p>完了・延期・選択をログに残す。やり直しも次の一歩として扱う。</p></div>
+<div class="panel"><h3>03 · キャラクター</h3><p>進捗や再開のタイミングでナビゲーターの表情や言葉が変わる構想。</p></div>
+</div>
+<ol class="flow"><li>今日を確認</li><li>任務を選ぶ</li><li>現実で行動</li><li>達成を記録</li><li>未来へ進む</li></ol>
+<p class="muted">※上記は作品の設計コンセプトです。記載されたすべての機能の実装完了を示すものではありません。</p>
+</section>
+<section class="content" id="characters"><span class="eyebrow">MAIN CAST</span><h2>運命を巡る4人の登場人物</h2>
+<div class="characters">
+<article class="character"><div class="code">SHIRASUMI REI · RETRY</div><h3>白澄レイ</h3><p class="tag">主人公／ナビゲーター　｜　後悔と再選択</p><p>銀白色の長髪と青紫の瞳。静かに寄り添う一方、自分の失敗を許すことが苦手。時間を記録し、選び直す力を持つ。</p><p class="quote">「まず一つ。未来はそこから変わる。」</p></article>
+<article class="character"><div class="code">KUROSAKI HARUTO · ECHO</div><h3>黒崎ハルト</h3><p class="tag">受容と残響</p><p>無口でぶっきらぼうだが誠実。過去を消すのではなく、抱えて進む強さを伝える存在。</p><p class="quote">「休むのも選択だ。」</p></article>
+<article class="character"><div class="code">TACHIBANA MIO · HOPE</div><h3>橘ミオ</h3><p class="tag">希望と未来</p><p>小さな成長を見つけるのが得意。明るさの裏にも迷いを抱え、未来を強要しない励まし役。</p><p class="quote">「明日の自分に、ひとつプレゼント！」</p></article>
+<article class="character"><div class="code">KUJO KAITO · FORECAST</div><h3>九条カイト</h3><p class="tag">予測と最適化</p><p>合理的で冷静。データから可能性を示すが、最終的な選択は人間の自由にあると知っていく。</p><p class="quote">「最適解は一つとは限らない。」</p></article>
+</div><p class="note">年齢・衣装の一部やストーリー展開は設定検討中です。作品紹介に掲載したキャラクター像は設計資料の要約です。</p>
+</section>
+<section class="content" id="apk"><span class="eyebrow">ANDROID APK / RELEASE ARCHIVE</span><h2>APK・バージョン情報</h2>
+<p>手元の既存APKの情報を確認した履歴です。APK自体は保存されており、v2.09・v2.08・v2.07について内部のZIP構造を検査済みです。</p>
+<div class="warn"><strong>現在、サイトからの直接ダウンロードは準備中です。</strong><p>APKの公開配布先URLは未設定です。未確認のURLをダウンロードボタンとして掲載していません。また、ZIP構造が正常でもAndroid端末へのインストールや起動が成功する保証はありません。</p></div>
+<div class="table-scroll"><table><thead><tr><th scope="col">版</th><th scope="col">ファイル名</th><th scope="col">主な変更</th><th scope="col">容量</th><th scope="col">公開状況</th></tr></thead>
+<tbody>
+<tr><td><strong>v2.09</strong></td><td>FateLog-v2.09-dialog-layout-fix.apk</td><td>ダイアログ・レイアウト調整</td><td>29.8 MB</td><td class="status">配布URL準備中</td></tr>
+<tr><td><strong>v2.08</strong></td><td>FateLog-v2.08-companion.apk</td><td>キャラクター関連</td><td>29.8 MB</td><td class="status">配布URL準備中</td></tr>
+<tr><td><strong>v2.07</strong></td><td>FateLog-v2.07-today-three.apk</td><td>「今日の3つ」関連</td><td>5.4 MB</td><td class="status">配布URL準備中</td></tr>
+</tbody></table></div>
+<p class="release-foot">v2.09 SHA-256：<code>e46743bfffe4761c103688eabee40599b0d7bd70bb2169a5d7f35b24accd9aa4</code></p>
+<p class="muted">作成元：既存APK成果物。ZIP内部破損の簡易確認は実施／Android実機インストール、起動、更新署名、データ互換性、セキュリティの動作確認は未実施。</p>
+<details class="details"><summary>APKを受け取った後の確認ポイント</summary><div>配布元を確認し、必要ならSHA-256を照合してください。既存アプリがある場合は先にデータのバックアップを取得してください。上書き更新時はアプリIDと署名の一致が必要です。インストール後は起動・トップ画面遷移・タスク保存・再起動後の復元を確認してください。</div></details>
+</section>
+<section class="content" id="dev"><span class="eyebrow">DEVELOPMENT / QA</span><h2>開発状況と次の課題</h2>
+<div class="mini-spec">
+<div><strong>設計：作成済み</strong><span>メイン4人、レイの表情10段階、会話8場面、操作と物語の連動方針。</span></div>
+<div><strong>APK：既存3版を確認</strong><span>v2.07 / v2.08 / v2.09の形式検査。v2.09 SHA-256一致。</span></div>
+<div><strong>実機確認：保留</strong><span>起動・旧版からの上書き更新・保存復元・低性能端末での操作感。</span></div>
+<div><strong>公開配布：準備中</strong><span>確認済みファイルの配布場所整備後、正式な直リンクを追加予定。</span></div>
+</div>
+<details class="details"><summary>今後の優先QA（3項目）</summary><div>① 現行APKのアプリID・署名が旧版と一致するか。② インストールからタイトル→ホーム→タスク保存まで実機で動くか。③ 画面サイズ・文字倍率・表情演出・通知・オフライン復元に問題がないか。</div></details>
+</section>
+<div class="bottom-link"><a class="btn primary" href="../">← 他のゲームも見る</a></div>
+</main>
+<footer>FATE LOG 〜運命改変録〜<br>作品紹介ページ初版：<time datetime="2026-10-14">2026年10月14日</time><br>画像・操作見本は概念デザインであり、現行アプリを直接実行するものではありません。</footer>
+</body></html>
