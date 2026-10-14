@@ -1,0 +1,28 @@
+name: FATE LOG Card QA
+on:
+  push:
+    paths:
+      - 'fate-log/index.html'
+      - 'fate-log/assets/cards/**'
+      - 'fate-log/qa/**'
+      - '.github/workflows/fatelog-card-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: 'fate-log/qa/requirements.txt'
+      - name: Install QA packages and Chromium
+        run: |
+          python -m pip install -r fate-log/qa/requirements.txt
+          python -m playwright install chromium --with-deps
+      - name: Run browser QA (6 viewport widths)
+        run: python fate-log/qa/test_cards.py
