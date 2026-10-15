@@ -54,6 +54,29 @@ footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:
 .card-lightbox [hidden]{display:none!important}.card-lightbox-error{border:1px solid #deb573;border-radius:9px;padding:14px;color:#ffdfa0;background:#2b231c;font-size:14px}.card-lightbox{max-height:94dvh}.card-lightbox img{max-height:calc(94dvh - 130px)}
 #card-special{scroll-margin-top:22px}
 @media(max-width:560px){.card-lightbox{width:calc(100vw - 16px);max-width:calc(100vw - 16px);padding:8px}.card-lightbox img{max-height:calc(100dvh - 145px)}.card-jump a{font-size:13px}.card-head{gap:8px}.card-count{flex:none}.archive-note{font-size:13px}}
+
+/* NEW ART ARCHIVE 10 IMAGES · Concept gallery added 2026-10-15 */
+#art-archive{scroll-margin-top:24px}
+.art-archive-intro{max-width:78ch}
+.art-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:22px 0}
+.art-entry{margin:0;min-width:0;scroll-margin-top:22px}
+.artwork-open{display:block;overflow:hidden;border:1px solid #b08d5b8f;border-radius:15px;background:#102036;text-decoration:none;color:#eef8ff;box-shadow:0 14px 30px #0007}
+.artwork-open:focus-visible,.artwork-open:hover{outline:3px solid #9ee9ff;outline-offset:3px;border-color:#98dff4}
+.artwork-open img{display:block;width:100%;height:auto;aspect-ratio:900/1272;object-fit:contain;background:#091324}
+.artwork-info{display:grid;gap:3px;padding:12px 16px}
+.artwork-info strong{color:#f4d79d;font-size:16px}.artwork-info small{color:#bed7e7;font-size:13px}
+.art-archive-note{border-left:4px solid #dfb874;background:#14293b;padding:12px 16px;border-radius:8px;color:#d8e5ef;font-size:13px}
+.art-modal{width:min(94vw,850px);max-width:94vw;max-height:95dvh;padding:12px;border:1px solid #d1ad6e;border-radius:12px;background:#081527;color:#fff;box-shadow:0 25px 90px #000e}
+.art-modal::backdrop{background:#000d}
+.art-modal-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.art-modal-toolbar strong{font-size:14px;color:#f6dcaa}
+.art-modal-controls{display:flex;gap:7px}
+.art-modal button{min-height:43px;padding:7px 12px;border-radius:8px;background:#193852;border:1px solid #9bc6de;color:#fff;cursor:pointer}
+.art-modal img{display:block;width:auto;max-width:100%;max-height:calc(95dvh - 160px);height:auto;object-fit:contain;margin:auto}
+.art-modal [hidden]{display:none!important}
+.art-modal .art-view-file{display:block;text-align:center;font-size:13px;margin-top:10px}
+.art-modal .art-load-error{padding:13px;color:#ffe1ac;border:1px solid #d6af72;border-radius:8px}
+@media(max-width:560px){.art-list{grid-template-columns:1fr;gap:16px}.artwork-info{padding:12px}.art-modal{width:calc(100vw - 12px);max-width:calc(100vw - 12px);padding:8px}.art-modal img{max-height:calc(95dvh - 170px)}}
 </style>
 </head>
 <body>
@@ -66,7 +89,7 @@ footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:
 <p class="lead">まず一つ。<br>未来はそこから変わる。</p>
 <p>現実のタスクを、時間改変アドベンチャーの「任務」に。今日の選択と達成が、キャラクターの言葉と物語に記録されていくスマホ向け作品です。</p>
 <span class="pill">Android優先 / 開発中</span>
-<div class="buttons"><a class="btn primary" href="#apk">APK・バージョン情報 ↓</a><a class="btn" href="#characters">キャラクター設定 ↓</a><a class="btn" href="#character-cards">カード図鑑10枚 ↓</a></div>
+<div class="buttons"><a class="btn primary" href="#apk">APK・バージョン情報 ↓</a><a class="btn" href="#characters">キャラクター設定 ↓</a><a class="btn" href="#character-cards">カード図鑑10枚 ↓</a><a class="btn" href="#art-archive">新規イメージ10枚 ↓</a></div>
 <p class="note">紹介ページ作成：<time datetime="2026-10-14">2026年10月14日</time> ／ APKの動作保証ではありません。</p>
 </div>
 <div class="screen" aria-label="FATE LOGの雰囲気を再現したデザイン見本。実機画面の画像ではありません。">
@@ -144,6 +167,83 @@ footer{text-align:center;border-top:1px solid #bba1743d;color:#91a9be;font-size:
 <p class="note">※キャラクターカードは2026年10月14日制作のコンセプトアートです。各カードの能力値・セリフは演出案であり、アプリの実装済みパラメータを示すものではありません。既存の4人の初期設定は上の「初期構想の4人」に保存しています。</p>
 </section>
 <dialog id="card-lightbox" class="card-lightbox" aria-labelledby="card-lightbox-title"><div class="lightbox-toolbar"><span id="card-lightbox-title">カード拡大表示</span><button type="button" id="card-lightbox-close" aria-label="拡大表示を閉じる">× 閉じる</button></div><img id="card-lightbox-image" alt="" hidden><p id="card-lightbox-error" class="card-lightbox-error" role="status" hidden>画像を表示できませんでした。画像リンクを別タブで確認するか、ページを再読み込みしてください。</p><a id="card-lightbox-link" href="#" target="_blank" rel="noopener">画像を開いて保存 ↗</a></dialog>
+
+<section class="content art-archive-section" id="art-archive" aria-labelledby="art-title">
+<span class="eyebrow">FATE LOG · CHARACTER ARCHIVE 2026.10.15</span>
+<h2 id="art-title">世界観ビジュアルアーカイブ｜全10枚</h2>
+<p class="art-archive-intro">主要人物から世界の住人、ヴィラン、召喚獣、伝説級ボスまで。10章にまとめた縦長のコンセプトアートを公開しました。画像をタップすると拡大でき、前後の画像に切り替えられます。</p>
+<p class="art-archive-note">この10枚は新規AI生成による<strong>世界観の試作案</strong>です。キャラクター名・容姿・物語設定は正式確定ではありません。別ページにある初期キャスト4人・従来の10枚カード図鑑はそのまま残しています。</p>
+<div class="card-jump" aria-label="アーカイブ内の移動"><a href="#art-archive-01">01から見る ↓</a><a href="#characters">初期構想の4人 ↑</a><a href="#character-cards">従来のカード10枚 ↑</a></div>
+<div class="art-list">
+<figure class="art-entry" id="art-archive-01">
+<a class="artwork-open" href="./assets/archive/archive-01.webp" data-artwork-title="01 · 主要キャラクター総覧" aria-label="01 主要キャラクター総覧のコンセプトアートを拡大">
+<img src="./assets/archive/archive-01.webp" alt="FATE LOGビジュアルアーカイブ01：主要キャラクター総覧。運命を紡ぐ者たちを表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>01 · 主要キャラクター総覧</strong><small>運命を紡ぐ者たち ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-02">
+<a class="artwork-open" href="./assets/archive/archive-02.webp" data-artwork-title="02 · 主人公チーム" aria-label="02 主人公チームのコンセプトアートを拡大">
+<img src="./assets/archive/archive-02.webp" alt="FATE LOGビジュアルアーカイブ02：主人公チーム。6人の旅路を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>02 · 主人公チーム</strong><small>6人の旅路 ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-03">
+<a class="artwork-open" href="./assets/archive/archive-03.webp" data-artwork-title="03 · 仲間たち" aria-label="03 仲間たちのコンセプトアートを拡大">
+<img src="./assets/archive/archive-03.webp" alt="FATE LOGビジュアルアーカイブ03：仲間たち。新たな出会いを表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>03 · 仲間たち</strong><small>新たな出会い ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-04">
+<a class="artwork-open" href="./assets/archive/archive-04.webp" data-artwork-title="04 · メンター＆ガーディアン" aria-label="04 メンター＆ガーディアンのコンセプトアートを拡大">
+<img src="./assets/archive/archive-04.webp" alt="FATE LOGビジュアルアーカイブ04：メンター＆ガーディアン。導きと守護を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>04 · メンター＆ガーディアン</strong><small>導きと守護 ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-05">
+<a class="artwork-open" href="./assets/archive/archive-05.webp" data-artwork-title="05 · 時間管理局" aria-label="05 時間管理局のコンセプトアートを拡大">
+<img src="./assets/archive/archive-05.webp" alt="FATE LOGビジュアルアーカイブ05：時間管理局。時を守る組織を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>05 · 時間管理局</strong><small>時を守る組織 ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-06">
+<a class="artwork-open" href="./assets/archive/archive-06.webp" data-artwork-title="06 · 街と日常の人々" aria-label="06 街と日常の人々のコンセプトアートを拡大">
+<img src="./assets/archive/archive-06.webp" alt="FATE LOGビジュアルアーカイブ06：街と日常の人々。世界をつくる人々を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>06 · 街と日常の人々</strong><small>世界をつくる人々 ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-07">
+<a class="artwork-open" href="./assets/archive/archive-07.webp" data-artwork-title="07 · ライバル" aria-label="07 ライバルのコンセプトアートを拡大">
+<img src="./assets/archive/archive-07.webp" alt="FATE LOGビジュアルアーカイブ07：ライバル。別の運命を選んだ者を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>07 · ライバル</strong><small>別の運命を選んだ者 ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-08">
+<a class="artwork-open" href="./assets/archive/archive-08.webp" data-artwork-title="08 · ヴィラン" aria-label="08 ヴィランのコンセプトアートを拡大">
+<img src="./assets/archive/archive-08.webp" alt="FATE LOGビジュアルアーカイブ08：ヴィラン。対立する意志を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>08 · ヴィラン</strong><small>対立する意志 ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-09">
+<a class="artwork-open" href="./assets/archive/archive-09.webp" data-artwork-title="09 · マスコット＆召喚獣" aria-label="09 マスコット＆召喚獣のコンセプトアートを拡大">
+<img src="./assets/archive/archive-09.webp" alt="FATE LOGビジュアルアーカイブ09：マスコット＆召喚獣。小さな仲間を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>09 · マスコット＆召喚獣</strong><small>小さな仲間 ／ タップして拡大</small></span></a>
+</figure>
+
+<figure class="art-entry" id="art-archive-10">
+<a class="artwork-open" href="./assets/archive/archive-10.webp" data-artwork-title="10 · 伝説級ボス" aria-label="10 伝説級ボスのコンセプトアートを拡大">
+<img src="./assets/archive/archive-10.webp" alt="FATE LOGビジュアルアーカイブ10：伝説級ボス。世界の果ての存在を表現したオリジナルのイメージ" loading="lazy" decoding="async" width="900" height="1272">
+<span class="artwork-info"><strong>10 · 伝説級ボス</strong><small>世界の果ての存在 ／ タップして拡大</small></span></a>
+</figure>
+</div>
+<p class="note">制作日：2026年10月15日／掲載内容は構想ビジュアルです。既存アプリに実装されたキャラクターやゲーム画面を示すものではありません。</p>
+<a class="btn" href="../#fate-log">← ゲーム作品一覧のFATE LOGへ</a>
+</section>
+<dialog id="art-modal" class="art-modal" aria-label="ビジュアルアーカイブの拡大表示">
+<div class="art-modal-toolbar"><strong id="art-modal-title">画像を拡大</strong><div class="art-modal-controls"><button id="art-prev" type="button" aria-label="前の画像">← 前へ</button><button id="art-next" type="button" aria-label="次の画像">次へ →</button><button id="art-close" type="button" aria-label="閉じる">× 閉じる</button></div></div>
+<img id="art-modal-image" alt="" hidden>
+<p id="art-modal-error" class="art-load-error" role="status" hidden>画像を読み込めませんでした。直接画像を開くリンクをご利用ください。</p>
+<a class="art-view-file" id="art-modal-file" href="#" target="_blank" rel="noopener noreferrer">画像を直接開く ↗</a>
+</dialog>
 <section class="content" id="apk"><span class="eyebrow">ANDROID APK / RELEASE ARCHIVE</span><h2>APK・バージョン情報</h2>
 <p>手元の既存APKの情報を確認した履歴です。APK自体は保存されており、v2.09・v2.08・v2.07について内部のZIP構造を検査済みです。</p>
 <div class="warn"><strong>現在、サイトからの直接ダウンロードは準備中です。</strong><p>APKの公開配布先URLは未設定です。未確認のURLをダウンロードボタンとして掲載していません。また、ZIP構造が正常でもAndroid端末へのインストールや起動が成功する保証はありません。</p></div>
@@ -203,6 +303,40 @@ im.addEventListener('error',()=>{im.hidden=true;error.hidden=false;});
 close.addEventListener('click',()=>dlg.close());
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
 dlg.addEventListener('close',()=>{im.removeAttribute('src');im.hidden=true;error.hidden=true;if(lastFocus)lastFocus.focus();});
+})();
+</script>
+
+<script>
+(()=>{
+const links=[...document.querySelectorAll('.artwork-open')];
+const modal=document.getElementById('art-modal');
+if(!links.length||!modal||typeof modal.showModal!=='function')return;
+const photo=document.getElementById('art-modal-image');
+const title=document.getElementById('art-modal-title');
+const file=document.getElementById('art-modal-file');
+const error=document.getElementById('art-modal-error');
+let index=0,focusOrigin=null;
+const show=(n)=>{
+  index=(n+links.length)%links.length;
+  const link=links[index],label=link.dataset.artworkTitle||'FATE LOG';
+  title.textContent=label;photo.alt=label+'の拡大ビジュアル';
+  photo.hidden=true;error.hidden=true;file.href=link.href;photo.src=link.href;
+};
+links.forEach((a,i)=>a.addEventListener('click',e=>{
+  e.preventDefault();focusOrigin=a;show(i);if(!modal.open)modal.showModal();
+}));
+document.getElementById('art-prev').addEventListener('click',()=>show(index-1));
+document.getElementById('art-next').addEventListener('click',()=>show(index+1));
+document.getElementById('art-close').addEventListener('click',()=>modal.close());
+photo.addEventListener('load',()=>{photo.hidden=false;error.hidden=true;});
+photo.addEventListener('error',()=>{photo.hidden=true;error.hidden=false;});
+modal.addEventListener('click',e=>{if(e.target===modal)modal.close();});
+document.addEventListener('keydown',e=>{
+ if(!modal.open)return;
+ if(e.key==='ArrowLeft'){e.preventDefault();show(index-1);}
+ if(e.key==='ArrowRight'){e.preventDefault();show(index+1);}
+});
+modal.addEventListener('close',()=>{photo.removeAttribute('src');photo.hidden=true;error.hidden=true;if(focusOrigin)focusOrigin.focus();});
 })();
 </script>
 </body></html>
