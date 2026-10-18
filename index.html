@@ -68,22 +68,125 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
 .fatelog-newarchive .archive-more{display:table;margin:15px auto 0}
 @media(max-width:700px){.fatelog-art-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:440px){.fatelog-art-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.fatelog-art-grid span{font-size:12px}}
+
+/* Showcase visual system · 2026-10-18 */
+:root{--font-scale:1;scroll-behavior:smooth}
+body{font-size:calc(16px * var(--font-scale))}
+#top{scroll-margin-top:0}
+.intro{padding-top:45px;padding-bottom:25px}
+.intro h1{font-size:clamp(calc(31px * var(--font-scale)),6vw,calc(46px * var(--font-scale)))}
+.intro p,.showcase-info p{font-size:calc(14px * var(--font-scale))}
+.showcase{padding:16px 0 56px;scroll-margin-top:16px}
+.showcase-heading{display:flex;justify-content:space-between;gap:18px;align-items:end;margin:0 0 12px}
+.showcase-heading h2{font-size:clamp(calc(25px * var(--font-scale)),5vw,calc(33px * var(--font-scale)))}
+.showcase-heading>p{margin:0;color:#aabed8;font-size:calc(13px * var(--font-scale));text-align:right}
+.showcase-count{display:block;font-size:calc(11px * var(--font-scale));font-weight:750;letter-spacing:.11em;color:#8dcff1;margin-top:4px}
+.showcase-disclaimer{margin:0 0 20px;border-left:3px solid #72cedd;padding:8px 12px;background:#17395a55;border-radius:0 8px 8px 0;color:#c4d9e9;font-size:calc(12px * var(--font-scale))}
+.showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.showcase-card{min-width:0;display:flex;flex-direction:column;padding:13px;border:1px solid #577ca087;border-radius:18px;background:linear-gradient(145deg,#163051 0%,#0b1d35 65%,#0d1730);box-shadow:0 13px 35px #0005;transition:transform .18s ease,border-color .18s ease}
+.showcase-card:hover{transform:translateY(-3px);border-color:#9adbea}
+.showcase-card.theme-neko{border-top:3px solid #88e9ef}.showcase-card.theme-cat{border-top:3px solid #a5efce}.showcase-card.theme-sky{border-top:3px solid #ffe6a5}.showcase-card.theme-holo{border-top:3px solid #c5b0ff}.showcase-card.theme-fate{border-top:3px solid #f1c58a}
+.card-top{display:flex;justify-content:space-between;gap:12px;padding:0 3px 11px;font-size:calc(10px * var(--font-scale));letter-spacing:.10em;color:#b9cfdf;font-weight:800}
+.card-top span:last-child{text-align:right;color:#e7d8b9}
+.thumb-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.showcase-thumb{min-width:0;margin:0;border:1px solid #5e82a363;border-radius:12px;overflow:hidden;background:#08182d}
+.showcase-thumb a{display:block;overflow:hidden;aspect-ratio:1.32;background:radial-gradient(circle at 50% 34%,#354b87,#0d142b 80%)}
+.showcase-thumb img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .25s ease}
+.showcase-thumb img.fit-contain{object-fit:contain;padding:10px}
+.showcase-thumb a:hover img,.showcase-thumb a:focus-visible img{transform:scale(1.045)}
+.showcase-thumb figcaption{min-height:37px;display:flex;align-items:center;justify-content:center;padding:5px 4px;text-align:center;color:#d5e3f3;background:#091a32;font-size:calc(10px * var(--font-scale));line-height:1.35;font-weight:750}
+.showcase-info{padding:14px 3px 2px;flex:1}
+.showcase-info h3{font-size:clamp(calc(18px * var(--font-scale)),2.2vw,calc(22px * var(--font-scale)));line-height:1.35;margin:0 0 7px;letter-spacing:.025em;overflow-wrap:anywhere}
+.showcase-info p{margin:0 0 12px;color:#b7cde2;line-height:1.65}
+.showcase-actions{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:8px}
+.showcase-action{display:flex;align-items:center;justify-content:center;gap:6px;min-height:45px;padding:8px 7px;text-align:center;border:1px solid #718faa;border-radius:10px;font-size:calc(12px * var(--font-scale));font-weight:850;text-decoration:none;line-height:1.35}
+.showcase-action.primary{background:linear-gradient(110deg,#8ff0ee,#a6c7ff);border-color:#b9ecff;color:#071c36}
+.showcase-action.secondary{background:#162c4a;color:#e3f2ff}
+.showcase-action:hover{filter:brightness(1.12)}
+.site-tools{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:0 auto 19px}
+.site-tools-label{font-size:calc(11px * var(--font-scale));color:#c5dbec}
+.text-buttons{display:flex;border:1px solid #7da1bd88;border-radius:10px;overflow:hidden}
+.text-buttons button{min-width:48px;min-height:40px;border:0;border-right:1px solid #7da1bd88;color:#ecf6ff;background:#162a48;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.text-buttons button:last-child{border-right:0}
+.text-buttons button[aria-pressed="true"]{background:#d6f4ff;color:#10243d}
+.text-buttons button:focus-visible{outline:3px solid #ffe39d;outline-offset:-3px}
+.back-to-top{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:20;display:grid;place-items:center;min-width:56px;min-height:44px;padding:6px 9px;border-radius:30px;background:#def5ff;color:#0b2844;text-decoration:none;font-size:13px;font-weight:900;box-shadow:0 6px 28px #0008}
+.play-note,.neko-note{font-size:calc(14px * var(--font-scale))}
+.instructions dl,.instructions summary{font-size:calc(13px * var(--font-scale))}
+.publish-date,.page-date{font-size:calc(12px * var(--font-scale))}
+@media(max-width:700px){.showcase-grid{grid-template-columns:1fr;gap:14px}.showcase-heading{align-items:start;flex-direction:column;gap:5px}.showcase-heading>p{text-align:left}.intro{padding-top:31px}.showcase{padding-bottom:33px}.showcase-thumb a{aspect-ratio:1.45}}
+@media(max-width:365px){.showcase-card{padding:10px}.thumb-pair{gap:6px}.showcase-thumb figcaption{font-size:10px;min-height:42px}.showcase-actions{grid-template-columns:1fr}.showcase-action{min-height:42px}.site-tools{gap:6px}.back-to-top{right:9px;bottom:9px}}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.showcase-card,.showcase-thumb img{transition:none}}
 </style>
 </head>
-<body>
+<body id="top">
 <main>
   <header class="intro">
+    <nav class="site-tools" aria-label="表示設定"><span class="site-tools-label">文字サイズ</span><div class="text-buttons" role="group" aria-label="文字サイズ切替"><button type="button" data-font="small" aria-pressed="false">小</button><button type="button" data-font="medium" aria-pressed="true">中</button><button type="button" data-font="large" aria-pressed="false">大</button></div></nav>
     <small>PROJECT VALKYRIE</small>
-    <h1>SKY DASH QUEST</h1>
-    <p>天空の遺跡を駆ける、スマホ対応の横スクロールアクション。</p>
+    <h1>GAME &amp; EXPERIENCE <span style="color:#9aeaff">COLLECTION</span></h1>
+    <p>AI曲芸師の5つの世界へ。作品イメージを見て、ゲーム画面を確かめて、スマホで遊ぼう。</p>
     <a class="b" href="./sky-dash-quest/">天空ステージを起動</a>
-    <a class="sub" href="#tenku-game">このページの下で遊ぶ ↓</a>
+    <a class="sub" href="#works">5作品のサムネイル一覧を見る ↓</a>
     <a class="sub" href="#neko-gravity">新作 NEKO GRAVITY で遊ぶ ↓</a>
     <a class="sub" href="#cat-drop-guardian">新作 CAT DROP GUARDIAN で遊ぶ ↓</a>
     <a class="sub" href="#tilt-hologram">AI曲芸師 Tilt Hologram v9.0 を見る ↓</a>
     <a class="sub" href="#fate-log">🕰 FATE LOG 〜運命改変録〜 を見る ↓</a>
-    <p class="page-date">この版の最終更新日：<time datetime="2026-10-15">2026年10月15日</time></p>
+    <p class="page-date">この版の最終更新日：<time datetime="2026-10-18">2026年10月18日</time></p>
   </header>
+
+  <!-- Showcase added 2026-10-18: key art + clearly labelled illustrated screen concepts -->
+  <section id="works" class="showcase" aria-labelledby="showcase-title">
+    <div class="showcase-heading"><div><p class="eyebrow">FIVE WORLDS · ONE PLAYGROUND</p><h2 id="showcase-title">作品を選ぶ <span class="showcase-count">5 GAMES &amp; EXPERIENCES</span></h2></div><p>気になるサムネイルから、その世界へ。</p></div>
+    <p class="showcase-disclaimer">左は作品イメージ、右はゲーム画面の<strong>再現イメージ</strong>です。実際の画面・操作は「ゲーム画面を見る」から確認できます。</p>
+    <div class="showcase-grid">
+      <article class="showcase-card theme-sky" aria-label="SKY DASH QUEST">
+        <div class="card-top"><span>01 / 05</span><span>ACTION · SKY RUINS</span></div>
+        <div class="thumb-pair">
+          <figure class="showcase-thumb"><a href="#tenku-game" aria-label="SKY DASH QUEST の紹介と実際のゲーム画面へ"><img src="./assets/showcase-sky-art.svg" alt="SKY DASH QUEST の作品イメージ" width="1200" height="780" decoding="async" loading="lazy" class=""></a><figcaption>作品イメージ</figcaption></figure>
+          <figure class="showcase-thumb"><a href="#tenku-game" aria-label="SKY DASH QUEST の実際のゲーム画面へ"><img src="./assets/showcase-sky-screen.svg" alt="SKY DASH QUEST のゲーム画面を表現した再現イメージ" width="1200" height="780" decoding="async" loading="lazy"></a><figcaption>ゲーム画面の再現イメージ</figcaption></figure>
+        </div>
+        <div class="showcase-info"><h3>SKY DASH QUEST</h3><p>天空遺跡を駆ける横スクロールアクション。剣・2段ジャンプ・ダッシュで星を集めよう。</p></div>
+        <div class="showcase-actions"><a class="showcase-action primary" href="#tenku-game">ゲーム画面を見る <span aria-hidden="true">↓</span></a><a class="showcase-action secondary" href="./sky-dash-quest/" >作品を開く <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="showcase-card theme-neko" aria-label="NEKO GRAVITY">
+        <div class="card-top"><span>02 / 05</span><span>GRAVITY · CAT PUZZLE</span></div>
+        <div class="thumb-pair">
+          <figure class="showcase-thumb"><a href="#neko-gravity" aria-label="NEKO GRAVITY の紹介と実際のゲーム画面へ"><img src="./neko-gravity/icon.svg" alt="NEKO GRAVITY の作品イメージ" width="1200" height="780" decoding="async" loading="lazy" class="fit-contain"></a><figcaption>作品イメージ</figcaption></figure>
+          <figure class="showcase-thumb"><a href="#neko-gravity" aria-label="NEKO GRAVITY の実際のゲーム画面へ"><img src="./assets/showcase-neko-screen.svg" alt="NEKO GRAVITY のゲーム画面を表現した再現イメージ" width="1200" height="780" decoding="async" loading="lazy"></a><figcaption>ゲーム画面の再現イメージ</figcaption></figure>
+        </div>
+        <div class="showcase-info"><h3>NEKO GRAVITY</h3><p>重力をくるりと切り替え、3つの星を集めながら猫をおうちへ導く12ステージ。</p></div>
+        <div class="showcase-actions"><a class="showcase-action primary" href="#neko-gravity">ゲーム画面を見る <span aria-hidden="true">↓</span></a><a class="showcase-action secondary" href="./neko-gravity/" >作品を開く <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="showcase-card theme-cat" aria-label="CAT DROP GUARDIAN">
+        <div class="card-top"><span>03 / 05</span><span>PUZZLE × DEFENSE</span></div>
+        <div class="thumb-pair">
+          <figure class="showcase-thumb"><a href="#cat-drop-guardian" aria-label="CAT DROP GUARDIAN の紹介と実際のゲーム画面へ"><img src="./cat-drop-guardian/assets/key-visual.png" alt="CAT DROP GUARDIAN の作品イメージ" width="1200" height="780" decoding="async" loading="lazy" class=""></a><figcaption>作品イメージ</figcaption></figure>
+          <figure class="showcase-thumb"><a href="#cat-drop-guardian" aria-label="CAT DROP GUARDIAN の実際のゲーム画面へ"><img src="./assets/showcase-cat-screen.svg" alt="CAT DROP GUARDIAN のゲーム画面を表現した再現イメージ" width="1200" height="780" decoding="async" loading="lazy"></a><figcaption>ゲーム画面の再現イメージ</figcaption></figure>
+        </div>
+        <div class="showcase-info"><h3>CAT DROP GUARDIAN</h3><p>3匹そろえると猫の部隊が出撃！ 落ちものパズルと街の防衛を組み合わせたゲーム。</p></div>
+        <div class="showcase-actions"><a class="showcase-action primary" href="#cat-drop-guardian">ゲーム画面を見る <span aria-hidden="true">↓</span></a><a class="showcase-action secondary" href="./cat-drop-guardian/" >作品を開く <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="showcase-card theme-holo" aria-label="TILT HOLOGRAM v9.0">
+        <div class="card-top"><span>04 / 05</span><span>INTERACTIVE · HOLOGRAM</span></div>
+        <div class="thumb-pair">
+          <figure class="showcase-thumb"><a href="#tilt-hologram" aria-label="TILT HOLOGRAM v9.0 の紹介と実際のゲーム画面へ"><img src="./assets/showcase-holo-art.svg" alt="TILT HOLOGRAM v9.0 の作品イメージ" width="1200" height="780" decoding="async" loading="lazy" class=""></a><figcaption>作品イメージ</figcaption></figure>
+          <figure class="showcase-thumb"><a href="#tilt-hologram" aria-label="TILT HOLOGRAM v9.0 の実際のゲーム画面へ"><img src="./assets/showcase-holo-screen.svg" alt="TILT HOLOGRAM v9.0 のゲーム画面を表現した再現イメージ" width="1200" height="780" decoding="async" loading="lazy"></a><figcaption>ゲーム画面の再現イメージ</figcaption></figure>
+        </div>
+        <div class="showcase-info"><h3>TILT HOLOGRAM v9.0</h3><p>スマホの傾きや指の動きで、虹色の光とホログラムが変化する体験作品。</p></div>
+        <div class="showcase-actions"><a class="showcase-action primary" href="#tilt-hologram">ゲーム画面を見る <span aria-hidden="true">↓</span></a><a class="showcase-action secondary" href="https://layetylor-efc.github.io/ai-kyokugeishi-hologram1/" target="_blank" rel="noopener noreferrer">作品を開く <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="showcase-card theme-fate" aria-label="FATE LOG 〜運命改変録〜">
+        <div class="card-top"><span>05 / 05</span><span>TIME REWRITE · TASK RPG</span></div>
+        <div class="thumb-pair">
+          <figure class="showcase-thumb"><a href="#fate-log" aria-label="FATE LOG 〜運命改変録〜 の紹介と実際のゲーム画面へ"><img src="./fate-log/assets/archive/archive-01.webp" alt="FATE LOG 〜運命改変録〜 の作品イメージ" width="1200" height="780" decoding="async" loading="lazy" class=""></a><figcaption>作品イメージ</figcaption></figure>
+          <figure class="showcase-thumb"><a href="#fate-log" aria-label="FATE LOG 〜運命改変録〜 の実際のゲーム画面へ"><img src="./assets/showcase-fate-screen.svg" alt="FATE LOG 〜運命改変録〜 のゲーム画面を表現した再現イメージ" width="1200" height="780" decoding="async" loading="lazy"></a><figcaption>ゲーム画面の再現イメージ</figcaption></figure>
+        </div>
+        <div class="showcase-info"><h3>FATE LOG 〜運命改変録〜</h3><p>現実のタスクを任務に変える時間改変ADV。キャラクターと一緒に未来を選び直す。</p></div>
+        <div class="showcase-actions"><a class="showcase-action primary" href="#fate-log">ゲーム画面を見る <span aria-hidden="true">↓</span></a><a class="showcase-action secondary" href="./fate-log/" >作品詳細 <span aria-hidden="true">↗</span></a></div>
+      </article>
+    </div>
+  </section>
 
   <section class="play-section sky-section" id="tenku-game" aria-labelledby="stage-title">
     <div class="section-head">
@@ -237,5 +340,23 @@ footer{text-align:center;border-top:1px solid #819fbd26;padding:24px 0 32px;colo
   </section>
   <footer>SKY DASH QUEST · NEKO GRAVITY · CAT DROP GUARDIAN · AI曲芸師 Tilt Hologram v9.0 · FATE LOG 〜運命改変録〜<br>この版の最終更新日：<time datetime="2026-10-15">2026年10月15日</time><br>スマホからブラウザですぐに体験</footer>
 </main>
+<a class="back-to-top" href="#top" aria-label="ページ先頭に戻る">↑ TOP</a>
+
+<script>
+(function(){
+  const levels={small:.875,medium:1,large:1.22};
+  const buttons=Array.from(document.querySelectorAll('[data-font]'));
+  function setFont(level){
+    if(!Object.prototype.hasOwnProperty.call(levels,level))level='medium';
+    document.documentElement.style.setProperty('--font-scale',String(levels[level]));
+    buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.font===level)));
+    try{localStorage.setItem('waru-font-size',level)}catch(_error){}
+  }
+  buttons.forEach(button=>button.addEventListener('click',()=>setFont(button.dataset.font)));
+  let initial='medium';
+  try{initial=localStorage.getItem('waru-font-size')||'medium'}catch(_error){}
+  setFont(initial);
+})();
+</script>
 </body>
 </html>
