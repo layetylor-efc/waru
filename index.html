@@ -117,6 +117,17 @@ body{font-size:calc(16px * var(--font-scale))}
 @media(max-width:700px){.showcase-grid{grid-template-columns:1fr;gap:14px}.showcase-heading{align-items:start;flex-direction:column;gap:5px}.showcase-heading>p{text-align:left}.intro{padding-top:31px}.showcase{padding-bottom:33px}.showcase-thumb a{aspect-ratio:1.45}}
 @media(max-width:365px){.showcase-card{padding:10px}.thumb-pair{gap:6px}.showcase-thumb figcaption{font-size:10px;min-height:42px}.showcase-actions{grid-template-columns:1fr}.showcase-action{min-height:42px}.site-tools{gap:6px}.back-to-top{right:9px;bottom:9px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.showcase-card,.showcase-thumb img{transition:none}}
+
+/* 天空のレガリア HEX BREATH BOMB · 2026-10-19 */
+.regalia-section .eyebrow{color:#9beeff}
+.regalia-section .open-game{border-color:#78defa88;background:#103852}
+.regalia-intro{max-width:650px;margin:0 auto 18px;text-align:center;font-size:calc(14px * var(--font-scale));color:#cfdef3}
+.regalia-frame{width:min(100%,480px);height:800px;aspect-ratio:auto;margin:0 auto;border:1px solid #89dfff99;background:#061832}
+.regalia-tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:16px 0}
+.regalia-tags span{font-size:12px;border:1px solid #67bddd77;background:#113253;border-radius:40px;padding:4px 12px;color:#d5f7ff}
+.regalia-notice{font-size:12px;color:#a7c8e2;text-align:center;max-width:620px;margin:12px auto}
+.regalia-section .instructions{max-width:540px}
+@media(max-width:480px){.regalia-frame{width:100%;height:760px}.regalia-tags span{font-size:11px}.regalia-intro{font-size:13px}}
 </style>
 </head>
 <body id="top">
@@ -125,14 +136,15 @@ body{font-size:calc(16px * var(--font-scale))}
     <nav class="site-tools" aria-label="表示設定"><span class="site-tools-label">文字サイズ</span><div class="text-buttons" role="group" aria-label="文字サイズ切替"><button type="button" data-font="small" aria-pressed="false">小</button><button type="button" data-font="medium" aria-pressed="true">中</button><button type="button" data-font="large" aria-pressed="false">大</button></div></nav>
     <small>PROJECT VALKYRIE</small>
     <h1>GAME &amp; EXPERIENCE <span style="color:#9aeaff">COLLECTION</span></h1>
-    <p>AI曲芸師の5つの世界へ。作品イメージを見て、ゲーム画面を確かめて、スマホで遊ぼう。</p>
+    <p>AI曲芸師の6つの世界へ。作品イメージを見て、ゲーム画面を確かめて、スマホで遊ぼう。</p>
     <a class="b" href="./sky-dash-quest/">天空ステージを起動</a>
     <a class="sub" href="#works">5作品のサムネイル一覧を見る ↓</a>
     <a class="sub" href="#neko-gravity">新作 NEKO GRAVITY で遊ぶ ↓</a>
     <a class="sub" href="#cat-drop-guardian">新作 CAT DROP GUARDIAN で遊ぶ ↓</a>
     <a class="sub" href="#tilt-hologram">AI曲芸師 Tilt Hologram v9.0 を見る ↓</a>
     <a class="sub" href="#fate-log">🕰 FATE LOG 〜運命改変録〜 を見る ↓</a>
-    <p class="page-date">この版の最終更新日：<time datetime="2026-10-18">2026年10月18日</time></p>
+    <a class="sub" href="#tenku-regalia">⚔ 天空のレガリア HEX ボムで遊ぶ ↓</a>
+    <p class="page-date">この版の最終更新日：<time datetime="2026-10-19">2026年10月19日</time></p>
   </header>
 
   <!-- Showcase added 2026-10-18: key art + clearly labelled illustrated screen concepts -->
@@ -338,7 +350,33 @@ body{font-size:calc(16px * var(--font-scale))}
       </dl>
     </details>
   </section>
-  <footer>SKY DASH QUEST · NEKO GRAVITY · CAT DROP GUARDIAN · AI曲芸師 Tilt Hologram v9.0 · FATE LOG 〜運命改変録〜<br>この版の最終更新日：<time datetime="2026-10-15">2026年10月15日</time><br>スマホからブラウザですぐに体験</footer>
+
+  <!-- 天空のレガリア v0.4.2 HTML browser version · appended 2026-10-19 -->
+  <section class="play-section regalia-section" id="tenku-regalia" aria-labelledby="regalia-title">
+    <div class="section-head">
+      <div><p class="eyebrow">NEW · SKY SHOOTING × HEX BREATH BOMB</p><h2 id="regalia-title">⚔ 天空のレガリア</h2></div>
+      <a class="open-game" href="./tenku-regalia/" target="_blank" rel="noopener noreferrer">全画面で遊ぶ ↗</a>
+    </div>
+    <p class="publish-date">HTML版掲載：<time datetime="2026-10-19">2026年10月19日</time> · v0.4.2</p>
+    <p class="regalia-intro">4人の主人公と天空を駆ける横スクロールSTG。<br><strong>新必殺技「HEX BREATH BOMB」</strong>で六角形の衝撃波を放ち、敵弾を消して反撃しよう！</p>
+    <div class="regalia-tags"><span>⚡ 敵弾消去ボム</span><span>4キャラ</span><span>5クエスト＋天塔</span><span>ブラウザでプレイ</span></div>
+    <div class="game-frame regalia-frame">
+      <iframe src="./tenku-regalia/" title="天空のレガリア v0.4.2 HEX BREATH BOMB ブラウザプレイ" loading="lazy" allow="fullscreen" allowfullscreen></iframe>
+    </div>
+    <p class="regalia-notice">画面内のタイトルからゲームを開始できます。スマホではボタン・十字操作、PCではキーボード操作が可能です。重い場合は「全画面で遊ぶ」をお試しください。</p>
+    <details class="instructions">
+      <summary>遊び方・HEXボムの仕様・HTMLリンク</summary>
+      <dl>
+        <dt>開始</dt><dd>タイトル → ホーム → クエスト → 出撃。4人のキャラを切り替えて遊べます。</dd>
+        <dt>スマホ操作</dt><dd>画面の十字パッドまたはドラッグで移動。右側の「攻撃」「スキル」「HEX ボム」などをタップします。</dd>
+        <dt>PC操作</dt><dd>WASD / 矢印で移動、J 射撃、K 剣戟、U/O スキル、B HEX ボム、I 覚醒、Esc 戻る。</dd>
+        <dt>HEX ボム</dt><dd>MP60消費・再使用12秒。自機から約1.2秒の六角形衝撃波。敵弾消去・広範囲ダメージ・短時間無敵。</dd>
+        <dt>セーブ</dt><dd>ブラウザのローカル保存を使用。Androidアプリとセーブは自動同期しません。必要ならゲーム内の設定からバックアップを利用してください。</dd>
+        <dt>共有</dt><dd><a href="./tenku-regalia/" target="_blank" rel="noopener noreferrer">天空のレガリア HTML版を直接開く ↗</a></dd>
+      </dl>
+    </details>
+  </section>
+  <footer>SKY DASH QUEST · NEKO GRAVITY · CAT DROP GUARDIAN · AI曲芸師 Tilt Hologram v9.0 · FATE LOG 〜運命改変録〜 · 天空のレガリア<br>この版の最終更新日：<time datetime="2026-10-19">2026年10月19日</time><br>スマホからブラウザですぐに体験</footer>
 </main>
 <a class="back-to-top" href="#top" aria-label="ページ先頭に戻る">↑ TOP</a>
 
